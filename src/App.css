@@ -3,13 +3,13 @@
 }
 
 .App-logo {
-  height: 5vmin;
+  height: 4vmin;
   pointer-events: none;
 }
 
 @media (max-width: 991px) {
   .App-logo {
-    height: 15vmin;
+    height: 9.5vmin;
   }
 }
 
