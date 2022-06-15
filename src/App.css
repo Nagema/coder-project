@@ -3,35 +3,29 @@
 }
 
 .App-logo {
-  height: 5.5vmin;
+  height: 45px;
   pointer-events: none;
 }
 
 .shopping-cart {
-  height: 3.5vmin;
+  pointer-events: none;
+  height: 35px;
 }
 
-@media (max-width: 991px) {
+a.navbar-brand {
+  font-size: medium;
+} 
+
+@media (min-width: 375px) {
   .App-logo {
-    height: 10vmin;
+    height: 45px;
   }
   .shopping-cart {
     pointer-events: none;
-    height: 10vmin;
+    height: 40px;
+  }
+  a.navbar-brand {
+    font-size: large;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
