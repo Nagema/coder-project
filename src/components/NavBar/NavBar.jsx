@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../logo.png';
+import logo from '../../logo.png';
 import Navbar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import { CardWidget } from '../CardWidget/CardWidget';
 
 export function NavBar() {
 
@@ -43,8 +44,9 @@ export function NavBar() {
                   aria-label="Search"
                 />
                 <Button variant="outline-success">Search</Button>
+                <CardWidget />
               </Form>
-            </Navbar.Collapse>
+            </Navbar.Collapse> 
           </Container>
         </Navbar>
       </div> 

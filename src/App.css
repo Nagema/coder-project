@@ -3,13 +3,21 @@
 }
 
 .App-logo {
-  height: 4vmin;
+  height: 5.5vmin;
   pointer-events: none;
+}
+
+.shopping-cart {
+  height: 3.5vmin;
 }
 
 @media (max-width: 991px) {
   .App-logo {
-    height: 9.5vmin;
+    height: 10vmin;
+  }
+  .shopping-cart {
+    pointer-events: none;
+    height: 10vmin;
   }
 }
 
