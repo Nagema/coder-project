@@ -15,7 +15,7 @@ export function NavBar() {
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <img src={logo} className="App-logo" alt="logo" />
-            <Navbar.Brand href="#">Fleamarket & other stories</Navbar.Brand>
+            <Navbar.Brand href="#">Fleamarket &amp; other stories</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
