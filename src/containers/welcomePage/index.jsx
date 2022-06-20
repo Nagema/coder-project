@@ -5,7 +5,7 @@ import WelcomeBanner from '../../assets/welcomeBanner.png'
 import MainTemplate from '../../assets/mainTemplate.png';
 import WorkingInProgress from '../../assets/workingInProgress.png'
 
-const ItemListContainer = ({ welcome, gretting, note }) => {
+const WelcomePage = ({ welcome, gretting, note }) => {
   return (
     <div>
       <Carousel>
@@ -44,4 +44,4 @@ const ItemListContainer = ({ welcome, gretting, note }) => {
   )
 }
 
-export default ItemListContainer
+export default WelcomePage
