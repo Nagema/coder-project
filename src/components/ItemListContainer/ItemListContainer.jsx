@@ -5,16 +5,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-export function ItemListContainer({ title, text, image , index }) {
+export function ItemListContainer({ title, text, image , items }) {
   return (
-    <div className='cardGroupWrap'>
+    <div className="cardGroupWrap">
       <Row sx={1} md={3} className="g-4">
-        {Array.from({ length: 6 }).map((_, idx) => (
+        {Array.from({ length: items }).map((_, idx) => (
           <Col>
             <div className="d-flex justify-content-around">
               <Card style={{ width: '15rem' }}>
                 <Card.Img variant="top" src={image} />
-                <Card.Body>
+                <Card.Body>  
                   <Card.Title>{title}</Card.Title>
                   <Card.Text>
                     {text}

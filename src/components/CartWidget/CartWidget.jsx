@@ -1,7 +1,7 @@
 import React from 'react';
 import ShoppingCartIcon from '../../assets/shopping-cart.png'
 
-export function CardWidget() {
+export function CartWidget() {
 
   return (
       <div>

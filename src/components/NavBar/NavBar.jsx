@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { CardWidget } from '../CardWidget/CardWidget';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export function NavBar() {
 
@@ -44,7 +44,7 @@ export function NavBar() {
                   aria-label="Search"
                 />
                 <Button variant="outline-success">Search</Button>
-                <CardWidget />
+                <CartWidget />
               </Form>
             </Navbar.Collapse> 
           </Container>
