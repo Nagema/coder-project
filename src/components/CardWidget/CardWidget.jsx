@@ -5,7 +5,11 @@ export function CardWidget() {
 
   return (
       <div>
-        <input className='shopping-cart' type="image" src={ShoppingCartIcon} alt="Submit"></input>
+        <input className='shopping-cart' 
+          type="image" 
+          src={ShoppingCartIcon} 
+          alt="Submit" 
+        />
       </div> 
   )
 }

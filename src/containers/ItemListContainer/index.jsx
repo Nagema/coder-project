@@ -5,7 +5,7 @@ import WelcomeBanner from '../../assets/welcomeBanner.png'
 import MainTemplate from '../../assets/mainTemplate.png';
 import WorkingInProgress from '../../assets/workingInProgress.png'
 
-const ItemListContainer = ({welcome, gretting, note }) => {
+const ItemListContainer = ({ welcome, gretting, note }) => {
   return (
     <div>
       <Carousel>

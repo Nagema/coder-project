@@ -8,7 +8,6 @@
 }
 
 .shopping-cart {
-  pointer-events: none;
   height: 35px;
 }
 
@@ -21,7 +20,6 @@ a.navbar-brand {
     height: 45px;
   }
   .shopping-cart {
-    pointer-events: none;
     height: 40px;
   }
   a.navbar-brand {
