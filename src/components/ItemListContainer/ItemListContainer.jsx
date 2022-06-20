@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
-export function CardGroup({ title, text, image , index }) {
+export function ItemListContainer({ title, text, image , index }) {
   return (
     <div className='cardGroupWrap'>
       <Row sx={1} md={3} className="g-4">
