@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+.carousel-caption h1 {
+    color: #2C1019;
+    font-family: 'Patua One', cursive;  
+}
+
+.note h1 { 
+    color: #624981;
+}
+
+div.welcome {
+    right: 50%;
+    bottom: 50%;
+    left: 18%;
+}
+
+div.gretting {
+    bottom: 20%;
+    left: 15%;
+}
+
+div.note {
+    bottom: 20%;
+    left: 50%;
+    right: 10%;
+} 
+
+@media (max-width: 450px) {    
+    .carousel-caption h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 750px) { 
+    .carousel-caption h1 {
+        font-size: 3em;
+    }   
+    
+    div.note {    
+        bottom: 40%;
+    }
+
+    div.gretting {
+        bottom: 50%;
+        left: 15%;
+    }
+}

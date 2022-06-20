@@ -1,5 +1,5 @@
-import React from 'react'
-import ShoppingCartIcon from '../../shopping-cart.png';
+import React from 'react';
+import ShoppingCartIcon from '../../assets/shopping-cart.png'
 
 export function CardWidget() {
 
