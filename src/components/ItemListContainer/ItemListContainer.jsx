@@ -24,7 +24,7 @@ export function ItemListContainer({
               <Card style={{ width: '15rem' }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>  
-                  <Card.Title>{title} {idx}</Card.Title>
+                  <Card.Title>{title} {idx + 1}</Card.Title>
                   <Card.Text>
                     {text}
                   </Card.Text>
