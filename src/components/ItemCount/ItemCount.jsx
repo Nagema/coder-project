@@ -15,7 +15,7 @@ export function ItemCount({stock, currency, price}) {
     }
   
     const deleteItems = () => {
-     add >= 1 && setCount(add - 1) 
+     add > 1 && setCount(add - 1) 
     }
   return (
     <div>
