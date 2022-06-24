@@ -1,0 +1,20 @@
+.buying-process {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-items {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.add-items p {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+div .badge {
+    line-height: 2.5;
+    font-weight: 400;
+}
