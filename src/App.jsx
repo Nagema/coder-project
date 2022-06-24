@@ -15,7 +15,7 @@ function App() {
         note="we're working on something special" 
       /> 
       <ItemListContainer
-        itemsAvailable={3}
+        stock={3}
         price={10.00}
         currency='€'
         title="Example"

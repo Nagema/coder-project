@@ -7,11 +7,11 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 
-export function ItemCount({itemsAvailable, currency, price}) {
-    const [add, setCount] = useState(0);
+export function ItemCount({stock, currency, price}) {
+    const [add, setCount] = useState(1);
 
     const addItems = () => { 
-     add < itemsAvailable && setCount(add + 1);
+     add < stock && setCount(add + 1);
     }
   
     const deleteItems = () => {

@@ -10,7 +10,7 @@ export function ItemListContainer({
   text, 
   image, 
   items, 
-  itemsAvailable, 
+  stock, 
   price, 
   currency 
 }) {
@@ -29,7 +29,7 @@ export function ItemListContainer({
                     {text}
                   </Card.Text>
                   <ItemCount   
-                    itemsAvailable={itemsAvailable}
+                    stock={stock}
                     price={price}
                     currency={currency}
                   />
