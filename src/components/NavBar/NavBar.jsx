@@ -44,8 +44,8 @@ export function NavBar() {
                   aria-label="Search"
                 />
                 <Button variant="outline-success">Search</Button>
-                <CartWidget />
               </Form>
+              <CartWidget />
             </Navbar.Collapse> 
           </Container>
         </Navbar>

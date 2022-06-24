@@ -1,15 +1,16 @@
 import React from 'react';
-import ShoppingCartIcon from '../../assets/shopping-cart.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import './styles.css'
 
 export function CartWidget() {
 
   return (
-      <div>
-        <input className='shopping-cart' 
-          type="image" 
-          src={ShoppingCartIcon} 
-          alt="Submit" 
-        />
+      <div className='cart-wrap'>
+        <button className='shopping-cart-btn'>   
+          <p>{0}</p>
+          <FontAwesomeIcon icon={faCartShopping} size="lg" />
+        </button>  
       </div> 
   )
 }

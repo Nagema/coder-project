@@ -7,10 +7,6 @@
   pointer-events: none;
 }
 
-.shopping-cart {
-  height: 35px;
-}
-
 a.navbar-brand {
   font-size: medium;
 } 
@@ -19,9 +15,7 @@ a.navbar-brand {
   .App-logo {
     height: 45px;
   }
-  .shopping-cart {
-    height: 40px;
-  }
+
   a.navbar-brand {
     font-size: large;
   }
