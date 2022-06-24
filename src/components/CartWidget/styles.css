@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Monda&family=Patua+One&display=swap');
+.cart-wrap {
+    margin-top: -7px;
+}
+
+.shopping-cart-btn { 
+    /* color: #248D5C; */
+    color: #4A4A4A;
+    border: none;
+    background-color: transparent;
+}
+
+.shopping-cart-btn p {
+    font-family: 'Concert One', cursive;
+    font-size: small;
+    margin-bottom: -4px;
+}
+
+.cart-wrap :hover {
+    color: #248D5C;
+}
