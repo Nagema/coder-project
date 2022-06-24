@@ -1,3 +1,4 @@
+import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './styles.css'
 import Card from 'react-bootstrap/Card';
