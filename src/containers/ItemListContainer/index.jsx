@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList } from '../../components/ItemList/ItemList';
-import example from '../../../src/assets/example.png';
+
 import './styles.css';
 
 const ItemListContainer = () => {
 
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {

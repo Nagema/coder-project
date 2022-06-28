@@ -6,7 +6,6 @@ export function Item({
     title, 
     text, 
     image, 
-    idx, 
     stock, 
     price, 
     currency 
@@ -19,7 +18,7 @@ export function Item({
           style={{ width: '8rem', height: '12rem', margin: 'auto', paddingTop: '20px' }} 
         />
         <Card.Body>  
-            <Card.Title>{title} {idx + 1}</Card.Title>
+            <Card.Title>{title}</Card.Title>
             <Card.Text>
               {text}
             </Card.Text>
