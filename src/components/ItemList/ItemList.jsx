@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import { Item } from '../Item/Item';
 import './styles.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export function ItemListContainer({ 
+export function ItemList({
   title, 
   text, 
   image, 

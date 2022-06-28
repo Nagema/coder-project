@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
-import { ItemListContainer }  from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer  from './containers/ItemListContainer';
 import WelcomePage from './containers/welcomePage';
 import example from '../src/assets/example.png';
 

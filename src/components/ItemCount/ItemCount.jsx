@@ -14,13 +14,13 @@ export function ItemCount({stock, currency, price}) {
      add < stock && setCount(add + 1);
     }
   
-    const deleteItems = () => {
+    const substractItems = () => {
      add > 1 && setCount(add - 1) 
     }
   return (
     <div>
         <div className='add-items'>
-            <Button variant="light" onClick={deleteItems}>
+            <Button variant="light" onClick={substractItems}>
                 <FontAwesomeIcon icon={faMinus} />
             </Button>  
             <p>{add}</p>
