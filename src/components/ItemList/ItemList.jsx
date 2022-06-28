@@ -5,27 +5,22 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export function ItemList({
-  title, 
-  text, 
-  image, 
-  items, 
+  products,
   stock, 
-  price, 
   currency 
 }) {
   return (
     <div className="cardGroupWrap">
       <Row sx={1} md={3} className="g-4">
-        {Array.from({ length: items }).map((_, idx) => (
+        {Array.from({ length: products.length }).map((_, idx) => (
           <Col key={idx}>
             <div className="d-flex justify-content-around">
               <Item 
-                title={title}
-                idx={idx}
-                text={text}
-                image={image}
+                title={products[idx].title}
+                text={products[idx].description}
+                image={products[idx].image}
                 stock={stock}
-                price={price}
+                price={products[idx].price}
                 currency={currency}
               />
             </div>

@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ItemList } from '../../components/ItemList/ItemList';
 import example from '../../../src/assets/example.png';
 import './styles.css';
 
 const ItemListContainer = () => {
+
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch {
+        //nope
+      }
+    }
+    getProducts()
+  }, [])
   return (
     <div>
-      <ItemList 
-        stock={3}
-        price={10.00}
-        currency='€'
-        title="Example"
-        image={example}
-        text="Some quick example text to build on the card title and make up the bulk of the card's content."
-        items={12} />
+      { products && 
+        <ItemList
+          products={products}
+          stock={3}
+          currency='€'
+          />
+      }
     </div>
   )
 }

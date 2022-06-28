@@ -12,17 +12,21 @@ export function Item({
     currency 
 }) {
   return (
-    <Card style={{ width: '15rem' }}>
-        <Card.Img variant="top" src={image} />
+    <Card style={{ width: '25rem' }}>
+        <Card.Img 
+          variant="top" 
+          src={image} 
+          style={{ width: '8rem', height: '12rem', margin: 'auto', paddingTop: '20px' }} 
+        />
         <Card.Body>  
             <Card.Title>{title} {idx + 1}</Card.Title>
             <Card.Text>
-            {text}
+              {text}
             </Card.Text>
             <ItemCount   
-                stock={stock}
-                price={price}
-                currency={currency}
+              stock={stock}
+              price={price}
+              currency={currency}
             />
         </Card.Body>
     </Card>
