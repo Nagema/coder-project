@@ -11,7 +11,7 @@ export function Item({
     currency 
 }) {
   return (
-    <Card style={{ width: '25rem' }}>
+    <Card style={{ width: '15rem' }}>
         <Card.Img 
           variant="top" 
           src={image} 
