@@ -11,8 +11,8 @@ export function ItemList({
 }) {
   return (
     <div className="cardGroupWrap">
-      <Row sx={1} md={3} className="g-4">
-        {Array.from({ length: products.length }).map((_, idx) => (
+      <Row sx={1} md={5} className="g-4">
+        {products.map((_, idx) => (
           <Col key={idx}>
             <div className="d-flex justify-content-around">
               <Item 
@@ -21,6 +21,7 @@ export function ItemList({
                 image={products[idx].image}
                 stock={stock}
                 price={products[idx].price}
+                goToDetail={'go to detail'}
                 currency={currency}
               />
             </div>
