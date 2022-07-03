@@ -9,18 +9,19 @@ export function ItemList({
   stock, 
   currency 
 }) {
+  debugger;
   return (
     <div className="cardGroupWrap">
       <Row sx={1} md={5} className="g-4">
-        {products.map((_, idx) => (
+        {products.map((product, idx) => (
           <Col key={idx}>
             <div className="d-flex justify-content-around">
               <Item 
-                title={products[idx].title}
-                text={products[idx].description}
-                image={products[idx].image}
+                title={product.title}
+                text={product.description}
+                image={product.image}
                 stock={stock}
-                price={products[idx].price}
+                price={product.price}
                 goToDetail={'go to detail'}
                 currency={currency}
               />
