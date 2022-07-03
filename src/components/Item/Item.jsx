@@ -3,12 +3,12 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import Card from 'react-bootstrap/Card';
 
 export function Item({
-    title, 
-    text, 
+    title,  
     image, 
     stock, 
     price, 
-    currency 
+    currency,
+    goToDetail 
 }) {
   return (
     <Card style={{ width: '15rem' }}>
@@ -19,13 +19,11 @@ export function Item({
         />
         <Card.Body>  
             <Card.Title>{title}</Card.Title>
-            <Card.Text>
-              {text}
-            </Card.Text>
             <ItemCount   
               stock={stock}
               price={price}
               currency={currency}
+              goToDetail={goToDetail}
             />
         </Card.Body>
     </Card>

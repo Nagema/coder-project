@@ -17,7 +17,6 @@ export function ItemList({
             <div className="d-flex justify-content-around">
               <Item 
                 title={product.title}
-                text={product.description}
                 image={product.image}
                 stock={stock}
                 price={product.price}
