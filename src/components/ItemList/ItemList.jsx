@@ -9,7 +9,6 @@ export function ItemList({
   stock, 
   currency 
 }) {
-  debugger;
   return (
     <div className="cardGroupWrap">
       <Row sx={1} md={5} className="g-4">
