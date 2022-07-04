@@ -13,7 +13,7 @@ export function NavBar() {
 
   return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar fixed='top' bg="light" expand="lg">
           <Container fluid>
             <img src={logo} className="App-logo" alt="logo" />
             <Navbar.Brand href="#">Fleamarket &amp; other stories</Navbar.Brand>
