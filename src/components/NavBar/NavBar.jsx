@@ -24,12 +24,12 @@ export function NavBar() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Clothes</Nav.Link>
-                <Nav.Link href="action3">Furniture</Nav.Link>
-                <NavDropdown title="Others" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Tecnology</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">Home appliances</NavDropdown.Item>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/category/jewelery">Jewelery</Nav.Link>
+                <Nav.Link href="/category/electronics">Electronics</Nav.Link>
+                <NavDropdown title="Clothes" id="navbarScrollingDropdown">
+                  <NavDropdown.Item href="/category/women">Women</NavDropdown.Item>
+                  <NavDropdown.Item href="/category/men">Men</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">
                     Something else here
