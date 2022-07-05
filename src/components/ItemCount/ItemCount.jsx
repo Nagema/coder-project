@@ -31,10 +31,6 @@ export function ItemCount({stock, currency, price, goToDetail}) {
         <div className='priceInfo'>
         <Badge bg="light" text="dark">{currency}{price}</Badge>
         </div>
-        <div className='buying-process'>
-            <Button variant="warning">add to cart</Button>
-            <Badge bg="light" text="dark">{goToDetail}</Badge>
-        </div>
     </div>
   )
 }
