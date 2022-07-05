@@ -11,15 +11,13 @@ export function ItemList({
 }) {
   return (
     <div className="cardGroupWrap">
-      <Row sx={1} md={5} className="g-4">
+      <Row sx={1} md={3} className="g-4">
         {products.map((product, idx) => (
           <Col key={idx}>
             <div className="d-flex justify-content-around">
               <Item 
-                title={product.title}
-                image={product.image}
+                product={product}
                 stock={stock}
-                price={product.price}
                 goToDetail={'go to detail'}
                 currency={currency}
               />
