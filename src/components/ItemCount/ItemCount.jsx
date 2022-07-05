@@ -7,7 +7,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 
-export function ItemCount({stock, currency, price, goToDetail}) {
+export function ItemCount({stock}) {
     const [add, setCount] = useState(1);
 
     const addItems = () => { 
@@ -27,9 +27,6 @@ export function ItemCount({stock, currency, price, goToDetail}) {
             <Button variant="light" onClick={addItems}>
                 <FontAwesomeIcon icon={faPlus} />
             </Button> 
-        </div>
-        <div className='priceInfo'>
-        <Badge bg="light" text="dark">{currency}{price}</Badge>
         </div>
     </div>
   )

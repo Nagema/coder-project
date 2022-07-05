@@ -2,13 +2,14 @@ import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import { useNavigate } from 'react-router-dom';
 
 export function Item({  
     stock,  
     currency,
-    goToDetail,
-    product 
+    product,
+    goToDetail
 }) {
 
   const navigate = useNavigate();
@@ -22,6 +23,9 @@ export function Item({
           src={product.image} 
           style={{ width: '8rem', height: '12rem', margin: 'auto', paddingTop: '20px' }} 
         />
+        <div className='price-info'>
+          <Badge bg="light" text="dark">{currency}{product.price}</Badge>
+        </div>
         <Card.Body>  
             <Card.Title>{product.title}</Card.Title>
             <ItemCount   
