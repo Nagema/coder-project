@@ -2,7 +2,6 @@ import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
 import { useNavigate } from 'react-router-dom';
 
 export function Item({  
