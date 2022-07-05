@@ -5,16 +5,20 @@
 ### Home 
 ![screensot demo](public/demoImages/home.png "Screenshot Demo")
 
-### all products
+### you can see all products in the home route and clicking the brand icon
 
 ![screensot products](public/demoImages/allProducts.png "Screenshot products")
 
 ![screensot products](public/demoImages/allproducts2.png "Screenshot products")
 
 
-### category
+### you can filter by category
 
 ![screensot category](public/demoImages/category.png "Screenshot category")
+
+### you can see the detail when clicking detail button
+
+![screensot category](public/demoImages/detailImage.png "Screenshot detail")
 
 
 
