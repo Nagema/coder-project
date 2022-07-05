@@ -2,14 +2,13 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 
 function ItemDetail({product}) {
-  console.log(product)
+  
   return (
-    <div>
-      <Card style={{ width: 'auto', height: 'auto' }}>
+    <div className='detail-item-card'>
+      <Card style={{ width:'80%', height: 'auto', margin: 'auto' }}>
         <Card.Img 
           variant="top" 
-          src={product.image} 
-          style={{ width: '18rem', height: '30rem', margin: 'auto', paddingTop: '20px' }} 
+          src={product.image}      
         />
         <Card.Body>  
             <Card.Title>{product.title}</Card.Title>

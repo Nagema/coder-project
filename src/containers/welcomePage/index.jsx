@@ -7,7 +7,7 @@ import WorkingInProgress from '../../assets/workingInProgress.png'
 
 const WelcomePage = ({ welcome, gretting, note }) => {
   return (
-    <div>
+    <div className='carousel-wrap'>
       <Carousel>
         <Carousel.Item>
           <img
