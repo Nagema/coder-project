@@ -28,8 +28,8 @@ export function NavBar() {
                 <Nav.Link href="/category/jewelery">Jewelery</Nav.Link>
                 <Nav.Link href="/category/electronics">Electronics</Nav.Link>
                 <NavDropdown title="Clothes" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="/category/women">Women</NavDropdown.Item>
-                  <NavDropdown.Item href="/category/men">Men</NavDropdown.Item>
+                  <NavDropdown.Item href="/category/women's clothing">Women</NavDropdown.Item>
+                  <NavDropdown.Item href="/category/men's clothing">Men</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">
                     Something else here
