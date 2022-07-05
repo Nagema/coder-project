@@ -5,6 +5,14 @@
     font-family: 'Patua One', cursive;  
 }
 
+.all-products {
+    padding-top: 50px;
+    text-align: center;
+    color: #4A4A4A;
+    font-family: 'Patua One', cursive; 
+    margin-bottom: -10%;
+}
+
 .note h1 { 
     color: #624981;
 }

@@ -8,6 +8,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 export function NavBar() {
 
@@ -15,7 +16,9 @@ export function NavBar() {
       <div>
         <Navbar fixed='top' bg="light" expand="lg">
           <Container fluid>
-            <img src={logo} className="App-logo" alt="logo" />
+            <Link to="/">
+              <img src={logo} className="App-logo" alt="logo" />
+            </Link>         
             <Navbar.Brand href="#">Fleamarket &amp; other stories</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
