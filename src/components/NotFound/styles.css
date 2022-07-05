@@ -15,8 +15,8 @@ div .notFoundImage {
 @media (min-width: 1100px) {   
     div .notFoundImage {
         background-color: #F3FDBF;
-        
     }
+    
     .notFoundImage { 
         padding-top: 9%;
         width: 100%;

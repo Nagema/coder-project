@@ -1,6 +1,10 @@
-.cardGroupWrap {
-    margin-top: 5%;
+.detail-item-card {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
 }
-/* div .carousel-inner {
-    height: 10px;
-} */
+
+.cardGroupWrap {
+    margin-top: 150px;
+}
