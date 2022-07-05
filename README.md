@@ -29,3 +29,7 @@ This web was developed with react.js
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+### React bootstrap
+react bootstrap´s components have been use to style the project
+
+### `npm install react-bootstrap bootstrap`
