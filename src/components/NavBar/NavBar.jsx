@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css'
 import logo from '../../assets/logo.png';
 import Navbar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';
@@ -27,15 +28,19 @@ export function NavBar() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/category/jewelery">Jewelery</Nav.Link>
-                <Nav.Link href="/category/electronics">Electronics</Nav.Link>
+                <Link className='links' to="/">Home</Link>  
+                <Link className='links' to="/category/jewelery">Jewelery</Link>
+                <Link className='links' to="/category/electronics">Electronics</Link>
                 <NavDropdown title="Clothes" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="/category/women's clothing">Women</NavDropdown.Item>
-                  <NavDropdown.Item href="/category/men's clothing">Men</NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link className='dropdown-link'to="/category/women's clothing">Women</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link className='dropdown-link'to="/category/men's clothing">Men</Link>
+                  </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">
-                    Something else here
+                    <Link className='dropdown-link'to="#">Something else here</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>

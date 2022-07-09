@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css'
 import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
