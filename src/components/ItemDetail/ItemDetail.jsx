@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
+import ButtonCount from '../ButtonCount/ButtonCount';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
-function ItemDetail({product}) {
-  
+function ItemDetail({
+  product
+}) {
+  product.stock = 3;
+
+  const [addedProducts, setAddedProducts] = useState(0);
+  const navigate = useNavigate();
+
+  const handleConfirm = (items) => {
+    setAddedProducts(items)
+  }
+  const purchase = () => {
+    navigate('/cart')
+  }
   return (
     <div className='detail-item-card'>
       <Card style={{ width:'80%', height: 'auto', margin: 'auto' }}>
@@ -15,9 +30,14 @@ function ItemDetail({product}) {
             <Card.Text>
               {product.description}
             </Card.Text>
+            {!addedProducts 
+              ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
+              : <Button onClick={purchase}>Terminar compra</Button>
+            }
         </Card.Body>
     </Card>
     </div>
+
   )
 }
 

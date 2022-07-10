@@ -1,0 +1,5 @@
+.button-count {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}

@@ -4,6 +4,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import { NotFound } from './components/NotFound/NotFound';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import ItemListContainer  from './containers/ItemListContainer';
+import Cart from './containers/Cart/Cart';
 import WelcomePage from './containers/welcomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/category/:categoryId' element={<ItemListContainer />}></Route>
           <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
           <Route path='*' element={<NotFound />}></Route>
+          <Route path='/cart' element={<Cart note="we're still working on this..." />}></Route>
         </Routes>
       </Fragment>
     </BrowserRouter>
