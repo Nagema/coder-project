@@ -14,7 +14,7 @@ export function Item({
     navigate(`/detail/${product.id}`)
   }
   return (
-    <Card style={{ width: '15rem' }} onClick={handleDetail}>
+    <Card style={{ width: '25rem', height:'25rem' }} onClick={handleDetail}>
         <Card.Img 
           variant="top" 
           src={product.image} 
@@ -24,7 +24,7 @@ export function Item({
           <Badge bg="light" text="dark">{currency}{product.price}</Badge>
         </div>
         <Card.Body>  
-            <Card.Title>{product.title}</Card.Title>
+            <Card.Title style={{ textAlign: 'center' }}>{product.title}</Card.Title>
             <div className='buying-process'>
           </div>
         </Card.Body>
