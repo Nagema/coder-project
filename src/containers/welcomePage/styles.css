@@ -5,6 +5,11 @@
     font-family: 'Patua One', cursive;  
 }
 
+.all-products-wrapper {
+    margin: 10%;
+    margin-top: 0;
+}
+
 .all-products {
     padding-top: 50px;
     text-align: center;
