@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './styles.css'
 import Card from 'react-bootstrap/Card';
 import ButtonCount from '../ButtonCount/ButtonCount';
 import Button from 'react-bootstrap/Button';
@@ -20,21 +21,22 @@ function ItemDetail({
   }
   return (
     <div className='detail-item-card'>
-      <Card style={{ width:'80%', height: 'auto', margin: 'auto' }}>
-        <Card.Img 
-          variant="top" 
-          src={product.image}      
-        />
-        <Card.Body>  
-            <Card.Title>{product.title}</Card.Title>
+      <Card style={{ width:'80%', margin: 'auto' }}>
+        <div className="card-detail-group">
+          <img className='detail-img'
+            src={product.image}
+            />
+          <Card.Body>  
+          <Card.Title>{product.title}</Card.Title>
             <Card.Text>
               {product.description}
             </Card.Text>
-            {!addedProducts 
-              ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
-              : <Button onClick={purchase}>Terminar compra</Button>
-            }
-        </Card.Body>
+              {!addedProducts 
+                ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
+                : <Button onClick={purchase}>Terminar compra</Button>
+              }
+          </Card.Body>
+        </div>
     </Card>
     </div>
 
