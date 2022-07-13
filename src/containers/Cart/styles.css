@@ -1,6 +1,14 @@
 .cardGroupWrap {
     margin-top: 50px;
 }
+
+.deleteAllButton {
+    position: relative;
+    left: 78%;
+    margin-bottom: 2%;
+    margin-top: 20%;
+}
+
 @media (min-width: 500px) {
     .cardGroupWrap {
         margin-top: 200px;
