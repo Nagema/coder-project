@@ -1,0 +1,8 @@
+.cardGroupWrap {
+    margin-top: 50px;
+}
+@media (min-width: 500px) {
+    .cardGroupWrap {
+        margin-top: 200px;
+    }
+}

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './styles.css'
 import Card from 'react-bootstrap/Card';
 import ButtonCount from '../ButtonCount/ButtonCount';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import { Shop } from '../../context/ShopContext'
 
 function ItemDetail({
   product
@@ -16,7 +17,11 @@ function ItemDetail({
   const handleConfirm = (items) => {
     setAddedProducts(items)
   }
+
+  const {addItem} = useContext(Shop);
+
   const purchase = () => {
+    addItem(product, addedProducts)
     navigate('/cart')
   }
   return (
@@ -37,7 +42,7 @@ function ItemDetail({
               }
           </Card.Body>
         </div>
-    </Card>
+      </Card>
     </div>
 
   )

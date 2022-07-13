@@ -1,5 +1,4 @@
 import React from 'react'
-import { ItemCount } from '../ItemCount/ItemCount';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import { useNavigate } from 'react-router-dom';
