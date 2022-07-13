@@ -1,6 +1,4 @@
-import { clear } from '@testing-library/user-event/dist/clear'
 import React, { createContext, useState }from 'react'
-import { Card } from 'react-bootstrap'
 
 export const Shop = createContext()
 
