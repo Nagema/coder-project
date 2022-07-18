@@ -24,12 +24,12 @@ export function CartWidget() {
 
   return (
       <div className='cart-wrap'>
-        <button className='shopping-cart-btn' onClick={goToCart}>   
-          {cart.length > 0 &&   
-           <p>{totalItems}</p>
-          } 
-          <FontAwesomeIcon icon={faCartShopping} size="lg" />
-        </button>  
+        {cart.length > 0 &&   
+          <button className='shopping-cart-btn' onClick={goToCart}>   
+            <p>{totalItems}</p>
+            <FontAwesomeIcon icon={faCartShopping} size="lg" />
+          </button>  
+        } 
       </div> 
   )
 }
