@@ -28,7 +28,7 @@ function App() {
             <Route path='/category/:categoryId' element={<ItemListContainer />}></Route>
             <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
             <Route path='*' element={<NotFound />}></Route>
-            <Route path='/cart' element={<Cart note="we're still working on this..." />}></Route>
+            <Route path='/cart' element={<Cart />}></Route>
           </Routes>
         </Fragment>
       </BrowserRouter>

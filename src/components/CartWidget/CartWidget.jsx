@@ -13,15 +13,21 @@ export function CartWidget() {
   const goToCart = () => {
     navigate('/cart')
   }
-
-  const {cart} = useContext(Shop);
+  
+  const { cart } = useContext(Shop);
+  
+  let totalItems = 0;
+  
+  cart.forEach(item => {
+    totalItems += item.addedProducts;
+  });
 
   return (
       <div className='cart-wrap'>
         <button className='shopping-cart-btn' onClick={goToCart}>   
-         {cart.length > 0 && 
-           <p>{cart.length}</p>
-           } 
+          {cart.length > 0 &&   
+           <p>{totalItems}</p>
+          } 
           <FontAwesomeIcon icon={faCartShopping} size="lg" />
         </button>  
       </div> 
