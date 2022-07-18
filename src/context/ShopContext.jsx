@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react'
 export const Shop = createContext()
 
 export const ShopProvider = ({children}) => {
+  debugger;
 
     const [stateA, setStateA] = useState('hola que tal')
 
@@ -12,8 +13,12 @@ export const ShopProvider = ({children}) => {
       const sameProduct = isInCart(product);
 
       if(sameProduct) {
-          sameProduct.addedProducts += quantity
-          setCart([...cart])
+          if (sameProduct.stock > sameProduct.addedProducts) {
+            sameProduct.addedProducts += quantity
+            setCart([...cart])
+          } else {
+            setCart([...cart])
+          }
       } else { 
         setCart([...cart, {...product, addedProducts: quantity }])
       }
