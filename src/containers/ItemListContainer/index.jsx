@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList } from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-
 import './styles.css';
+
 
 const ItemListContainer = () => {
 
@@ -36,7 +36,7 @@ const ItemListContainer = () => {
   }, [params, products])
   return (
     <div>
-      { products && 
+      { products &&
         <ItemList
           products={filteredproducts}
           stock={3}

@@ -1,9 +1,27 @@
 .cardGroupWrap {
-    margin-top: 50px;
+    margin-top: 200px;
+}
+.back-to-list {
+    position: relative;
+    left: 70%;
+    top: -70px;
 }
 
-@media (min-width: 500px) {
-    .cardGroupWrap {
-        margin-top: 200px;
+@media (max-width: 500px) {
+    .cardGroupWrap {  
+        margin-top: 50px;
+    }
+    
+    .back-to-list {
+        width: 30%;
+        height: 10%;
+        position: relative;
+        left: 70%;
+        top: -50px;
+    } 
+    
+    div .btn {
+    font-size: x-small;
+    padding: 5px;
     }
 }
