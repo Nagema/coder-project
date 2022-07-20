@@ -47,22 +47,12 @@ function Cart() {
        </>
       }
       <div className="cardGroupWrap">
-        {cart.length > 0 &&
-        <div className="deleteAllButton">
-          <Button variant="light" onClick={clear}> 
-            <span>
-              {deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
-            </span>    
-          </Button>
-          <p>{total}: {totalPrice}</p>
-        </div>
-        }
         <div className="cartImageWrapper">
           <Row sx={1} md={1} className="g-4">
             {cart.map((product) => (
-              <Col key={product.id}>
+              <div key={product.id}>
                 <div className="d-flex">
-                  <Card style={{ width:'50%', marginLeft: '5%'}}>
+                  <Card style={{ width:'50%', marginLeft: '5%', marginRight:'0%'}}>
                     <div className="card-detail-group">
                       <img className='detail-img'
                         src={product.image}
@@ -80,10 +70,20 @@ function Cart() {
                     </div>
                   </Card>
                 </div>
-              </Col>
+              </div>
             ))}
           </Row>
         </div>
+        {cart.length > 0 &&
+        <div className="deleteAllButton">
+          <Button variant="light" onClick={clear}> 
+            <span>
+              {deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
+            </span>    
+          </Button>
+          <p>{total}: {totalPrice}</p>
+        </div>
+        }
       </div>
     </Fragment>
   )

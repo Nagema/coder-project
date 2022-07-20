@@ -1,6 +1,8 @@
 .cardGroupWrap {
     margin-top: 200px;
+    display: flex;
 }
+
 .back-to-list {
     position: relative;
     left: 70%;
@@ -11,7 +13,7 @@
     .cardGroupWrap {  
         margin-top: 50px;
     }
-    
+
     .back-to-list {
         width: 30%;
         height: 10%;
