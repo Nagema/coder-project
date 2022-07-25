@@ -33,7 +33,7 @@ function Cart() {
   }
 
   const confirmOrder = async () => {
-    const order = generateOrder("alguien", "casa de alguien nro 1", cart, 300);
+    const order = generateOrder("alguien", "casa de alguien nro 1", cart, totalPrice);
     saveOrder(cart, order);
   }
   
