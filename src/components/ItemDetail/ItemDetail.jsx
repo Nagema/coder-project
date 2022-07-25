@@ -9,8 +9,6 @@ import { Shop } from '../../context/ShopContext'
 function ItemDetail({
   product
 }) {
-  product.stock = 3;
-
   const [addedProducts, setAddedProducts] = useState(0);
   const navigate = useNavigate();
 
@@ -38,7 +36,7 @@ function ItemDetail({
             </Card.Text>
               {!addedProducts 
                 ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
-                : <Button onClick={purchase}>Terminar compra</Button>
+                : <Button onClick={purchase}>Proceed to checkout ({addedProducts} item)</Button>
               }
           </Card.Body>
         </div>

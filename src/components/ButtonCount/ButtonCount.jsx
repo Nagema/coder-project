@@ -24,6 +24,8 @@ const ButtonCount = ({ onConfirm, maxQuantity }) => {
     const handleConfirm = () => {
         if (value <= maxQuantity) {
             onConfirm(value)
+        } else {
+            alert('products out of stock')
         }
     }
 
