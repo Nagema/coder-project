@@ -9,21 +9,12 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import EmptyCart from '../../assets/emptyCart.png';
 import { useNavigate } from 'react-router-dom';
 import generateOrder from '../../utils/generateOrder.js'
+
 import './styles.css'
 import saveOrder from '../../utils/saveOrder';
+import constants from '../../utils/constants';
 
 function Cart() {
-
-  const currency = 'EUR';
-  const qtyText = 'Qty';
-  const itemsText = 'items';
-  const deleteText = 'Delete';
-  const deleteAllText = 'Delete all';
-  const price = 'Price';
-  const subtotal = 'Subtotal';
-  const total = 'Total';
-  const goToSeeProducts = 'Back to products'
-  const confirmOrderText = 'Proceed to checkout'
   let totalPrice = 0;
 
   const { cart, removeItem, clear } = useContext(Shop);
@@ -48,7 +39,7 @@ function Cart() {
         <Image style={{width:'100%'}} src={EmptyCart} alt="Empty cart"></Image>
        <div className='back-to-list'>
         <Button variant="light" onClick={goToProducts}> 
-          {goToSeeProducts}
+          {constants.goToSeeProducts}
         </Button>
        </div>
        </>
@@ -66,13 +57,13 @@ function Cart() {
                         />
                       <Card.Body>  
                       <Card.Title>{product.title}</Card.Title>
-                      <Card.Title> {price} : {product.price} {currency}</Card.Title>
-                      <Card.Text>{qtyText} : {product.addedProducts}</Card.Text>
+                      <Card.Title> {constants.price} : {product.price} {constants.currency}</Card.Title>
+                      <Card.Text>{constants.qtyText} : {product.addedProducts}</Card.Text>
                       <Button variant="light" onClick={() => removeItem(product, 1)}> 
-                        <span> {deleteText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
+                        <span> {constants.deleteText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
                         </span>
                       </Button>
-                      <Card.Text>{subtotal} ({product.addedProducts} {itemsText}) : {product.addedProducts * product.price}</Card.Text>
+                      <Card.Text>{constants.subtotal} ({product.addedProducts} {constants.itemsText}) : {product.addedProducts * product.price}</Card.Text>
                       </Card.Body>
                     </div>
                   </Card>
@@ -86,14 +77,14 @@ function Cart() {
           <div>
             <Button variant="light" onClick={clear}> 
               <span>
-                {deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
+                {constants.deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
               </span>    
             </Button>
-            <p>{total}: {totalPrice}</p>
+            <p>{constants.total}: {totalPrice}</p>
           </div>
             <div>
             <Button variant="light" onClick={confirmOrder}> 
-              {confirmOrderText}
+              {constants.confirmOrderText}
             </Button>
             </div>
         </div>

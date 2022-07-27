@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import './styles.css';
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
+import constants from '../../utils/constants';
 
 const ItemListContainer = () => {
 
@@ -45,8 +46,7 @@ const ItemListContainer = () => {
       { products &&
         <ItemList
           products={filteredproducts}
-          stock={3}
-          currency='€'
+          currency={constants.eur}
           />
       }
     </div>

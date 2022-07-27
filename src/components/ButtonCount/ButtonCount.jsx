@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import constants from '../../utils/constants';
 
 const ButtonCount = ({ onConfirm, maxQuantity }) => {
 
@@ -41,7 +42,7 @@ const ButtonCount = ({ onConfirm, maxQuantity }) => {
                 </Button>     
             </div>
             <div className='button-count'>
-                <Button onClick={handleConfirm}>Confirm</Button>
+                <Button onClick={handleConfirm}>{constants.confirm}</Button>
             </div>
         </Fragment>
     )

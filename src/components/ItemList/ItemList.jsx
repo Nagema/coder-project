@@ -18,7 +18,6 @@ export function ItemList({
               <Item 
                 product={product}
                 stock={stock}
-                goToDetail={'go to detail'}
                 currency={currency}
               />
             </div>

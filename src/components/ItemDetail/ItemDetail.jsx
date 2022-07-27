@@ -5,6 +5,7 @@ import ButtonCount from '../ButtonCount/ButtonCount';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { Shop } from '../../context/ShopContext'
+import constants from '../../utils/constants';
 
 function ItemDetail({
   product
@@ -36,7 +37,7 @@ function ItemDetail({
             </Card.Text>
               {!addedProducts 
                 ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
-                : <Button onClick={purchase}>Proceed to checkout ({addedProducts} item)</Button>
+                : <Button onClick={purchase}>{constants.proceedToCheckout}: {addedProducts} {constants.item}</Button>
               }
           </Card.Body>
         </div>

@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import constants from '../../utils/constants';
 
 export function NavBar() {
 
@@ -20,7 +21,7 @@ export function NavBar() {
             <Link to="/">
               <img src={logo} className="App-logo" alt="logo" />
             </Link>         
-            <Navbar.Brand href="#">Fleamarket &amp; other stories</Navbar.Brand>
+            <Navbar.Brand href="#">{constants.fleamarketAndOtherStories}</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
@@ -28,19 +29,15 @@ export function NavBar() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Link className='links' to="/">Home</Link>  
-                <Link className='links' to="/category/jewelery">Jewelery</Link>
-                <Link className='links' to="/category/electronics">Electronics</Link>
+                <Link className='links' to="/">{constants.home}</Link>  
+                <Link className='links' to="/category/jewelery">{constants.jewelery}</Link>
+                <Link className='links' to="/category/electronics">{constants.electronics}</Link>
                 <NavDropdown title="Clothes" id="navbarScrollingDropdown">
                   <NavDropdown.Item>
-                    <Link className='dropdown-link'to="/category/women's clothing">Women</Link>
+                    <Link className='dropdown-link'to="/category/women's clothing">{constants.women}</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item>
-                    <Link className='dropdown-link'to="/category/men's clothing">Men</Link>
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    <Link className='dropdown-link'to="#">Something else here</Link>
+                    <Link className='dropdown-link'to="/category/men's clothing">{constants.men}</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
@@ -51,7 +48,7 @@ export function NavBar() {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success">{constants.search}</Button>
               </Form>
               <CartWidget />
             </Navbar.Collapse> 

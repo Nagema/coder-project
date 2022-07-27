@@ -8,6 +8,7 @@ import Cart from './containers/Cart/Cart';
 import WelcomePage from './containers/welcomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShopProvider from './context/ShopContext';
+import constants from './utils/constants';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
             <Route 
               path='/' 
               element={<WelcomePage 
-                welcome="welcome!" 
-                gretting="we're glad you're here" 
-                note="we're working on something special" 
+                welcome={constants.welcome} 
+                gretting={constants.gretting}
+                note={constants.note} 
                 /> 
               }>
             </Route>

@@ -5,6 +5,7 @@ import WelcomeBanner from '../../assets/welcomeBanner.png'
 import MainTemplate from '../../assets/mainTemplate.png';
 import WorkingInProgress from '../../assets/workingInProgress.png'
 import ItemListContainer from '../ItemListContainer';
+import constants from '../../utils/constants';
 
 const WelcomePage = ({ welcome, gretting, note }) => {
   return (
@@ -44,7 +45,7 @@ const WelcomePage = ({ welcome, gretting, note }) => {
         </Carousel>
       </div>
       <div className='all-products-wrapper'>
-        <h1 className='all-products'>See what's selling</h1>
+        <h1 className='all-products'>{constants.seeWhatsSelling}</h1>
         <ItemListContainer/>
       </div>
     </Fragment>
