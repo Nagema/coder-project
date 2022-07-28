@@ -4,7 +4,6 @@ export const Shop = createContext()
 
 export const ShopProvider = ({children}) => {
 
-    const [stateA, setStateA] = useState('hola que tal')
 
     const [cart, setCart] = useState([])
 
@@ -39,7 +38,7 @@ export const ShopProvider = ({children}) => {
     }
 
   return (
-    <Shop.Provider value={{stateA, setStateA, addItem, removeItem, clear, cart}}>
+    <Shop.Provider value={{addItem, removeItem, clear, cart}}>
         {children}
     </Shop.Provider>
   )
