@@ -33,12 +33,12 @@ export function NavBar() {
                 <Link className='links' to="/category/jewelery">{constants.jewelery}</Link>
                 <Link className='links' to="/category/electronics">{constants.electronics}</Link>
                 <NavDropdown title="Clothes" id="navbarScrollingDropdown">
-                  <NavDropdown.Item>
+                  <div>
                     <Link className='dropdown-link'to="/category/women's clothing">{constants.women}</Link>
-                  </NavDropdown.Item>
-                  <NavDropdown.Item>
+                  </div>
+                  <div>
                     <Link className='dropdown-link'to="/category/men's clothing">{constants.men}</Link>
-                  </NavDropdown.Item>
+                  </div>
                 </NavDropdown>
               </Nav>
               <Form className="d-flex">

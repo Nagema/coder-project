@@ -12,6 +12,7 @@
 
 .dropdown-link {   
     font-weight: 400;
+    padding: 4px 16px;
     color: #212529;
     text-align: inherit;
     text-decoration: none;
