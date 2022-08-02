@@ -1,5 +1,5 @@
-import React from 'react'
-import './styles.css'
+import React, { useState } from 'react';
+import './styles.css';
 import logo from '../../assets/logo.png';
 import Navbar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';

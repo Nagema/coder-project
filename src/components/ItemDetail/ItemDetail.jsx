@@ -17,7 +17,7 @@ function ItemDetail({
     setAddedProducts(items)
   }
 
-  const {addItem} = useContext(Shop);
+  const { addItem } = useContext(Shop);
 
   const purchase = () => {
     addItem(product, addedProducts)

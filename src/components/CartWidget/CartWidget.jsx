@@ -5,7 +5,6 @@ import './styles.css';
 import { Shop } from '../../context/ShopContext';
 import { useNavigate } from 'react-router-dom';
 
-
 export function CartWidget() {
 
   const navigate = useNavigate()

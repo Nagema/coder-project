@@ -44,26 +44,25 @@ function Cart() {
        </div>
        </>
       }
-      <div className="cardGroupWrap">
+      <div className="cart-wrapper">
         <div className="cartImageWrapper">
           <Row sx={1} md={1} className="g-4">
             {cart.map((product) => (
               <div key={product.id}>
                 <div className="d-flex">
-                  <Card style={{ width:'50%', marginLeft: '5%', marginRight:'0%'}}>
+                  <Card style={{ width:'65%', marginLeft:'5%', marginRight:'5%'}}>
                     <div className="card-detail-group">
                       <img className='detail-img'
                         src={product.image}
                         />
                       <Card.Body>  
-                      <Card.Title>{product.title}</Card.Title>
-                      <Card.Title> {constants.price} : {product.price} {constants.currency}</Card.Title>
+                      <p style={{fontWeight:'600'}}>{product.title}</p>
+                      <p>{constants.price} : {product.price} {constants.currency}</p>
                       <Card.Text>{constants.qtyText} : {product.addedProducts}</Card.Text>
                       <Button variant="light" onClick={() => removeItem(product, 1)}> 
-                        <span> {constants.deleteText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
-                        </span>
+                        <span> {constants.deleteText} {<FontAwesomeIcon icon={faTrash} size="lg" />}</span>
                       </Button>
-                      <Card.Text>{constants.subtotal} ({product.addedProducts} {constants.itemsText}) : {product.addedProducts * product.price}</Card.Text>
+                      <Card.Text>{constants.subtotal} ({product.addedProducts} {constants.itemsText}) : {product.addedProducts * product.price} {constants.eur}</Card.Text>
                       </Card.Body>
                     </div>
                   </Card>
@@ -73,17 +72,17 @@ function Cart() {
           </Row>
         </div>
         {cart.length > 0 &&
-        <div className="deleteAllButton">
+        <div className="delete-all-button-and-checkout">
           <div>
-            <Button variant="light" onClick={clear}> 
+            <Button variant="outline-secondary" onClick={clear}> 
               <span>
                 {constants.deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
               </span>    
             </Button>
-            <p>{constants.total}: {totalPrice}</p>
+            <p>{constants.total}: {totalPrice} {constants.eur}</p>
           </div>
             <div>
-            <Button variant="light" onClick={confirmOrder}> 
+            <Button variant="outline-success" onClick={confirmOrder}> 
               {constants.confirmOrderText}
             </Button>
             </div>

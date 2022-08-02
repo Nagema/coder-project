@@ -20,8 +20,10 @@ const constants = {
     qtyText: "Qty",
     seeWhatsSelling: "See what's selling",
     search: "Search",
+    sold: "sold out",
     subtotal: "Subtotal",
     total: "Total",
+    units: "units",
     welcome: "welcome!",
     women: "Women", 
 }
