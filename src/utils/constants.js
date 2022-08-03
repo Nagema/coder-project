@@ -20,7 +20,7 @@ const constants = {
     qtyText: "Qty",
     seeWhatsSelling: "See what's selling",
     search: "Search",
-    sold: "sold out",
+    sold: "Sold Out",
     subtotal: "Subtotal",
     total: "Total",
     units: "units",

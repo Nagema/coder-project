@@ -7,7 +7,7 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import constants from '../../utils/constants';
 
 const ButtonCount = ({ onConfirm, maxQuantity }) => {
-
+    
     const [value, setValue] = useState(1);
 
     const addItems = () => { 
@@ -30,19 +30,25 @@ const ButtonCount = ({ onConfirm, maxQuantity }) => {
         }
     }
 
+    const disabled = maxQuantity === 0; 
+
     return (
         <Fragment>
+            {!disabled &&
+                <div className='button-count'>
+                    <Button variant="light" onClick={substractItems}>
+                        <FontAwesomeIcon icon={faMinus} />
+                    </Button> 
+                    <p>{value}</p>   
+                    <Button variant="light" onClick={addItems}>
+                        <FontAwesomeIcon icon={faPlus} />
+                    </Button>     
+                </div>
+            }
             <div className='button-count'>
-                <Button variant="light" onClick={substractItems}>
-                    <FontAwesomeIcon icon={faMinus} />
-                </Button> 
-                <p>{value}</p>   
-                <Button variant="light" onClick={addItems}>
-                    <FontAwesomeIcon icon={faPlus} />
-                </Button>     
-            </div>
-            <div className='button-count'>
-                <Button onClick={handleConfirm}>{constants.confirm}</Button>
+                <Button disabled={disabled} onClick={handleConfirm}>
+                    {disabled ? constants.sold : constants.confirm}
+                </Button>
             </div>
         </Fragment>
     )

@@ -19,7 +19,7 @@ const saveOrder = (cart, order) => {
             if (outOfStock.length === 0) {
                 addDoc(collection(db, 'orders'), order).then(({ id }) => {
                     batch.commit().then(() => {
-                        alert("Generated order: " + id)
+                        alert("Generated order: " + id);
                     })
                 }).catch(() => {
                   //nope
