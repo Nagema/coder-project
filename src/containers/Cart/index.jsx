@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useState } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Shop } from '../../context/ShopContext';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -26,6 +26,7 @@ function Cart() {
   const confirmOrder = async () => {
     const order = generateOrder("alguien", "casa de alguien nro 1", cart, totalPrice);
     saveOrder(cart, order);
+    clear();
   }
   
   cart.forEach(item => {

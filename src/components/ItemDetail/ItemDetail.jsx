@@ -29,6 +29,7 @@ function ItemDetail({
         <div className="card-detail-group">
           <img className='detail-img'
             src={product.image}
+            alt={product.title}
             />
           <Card.Body>  
           <Card.Title>{product.title}</Card.Title>
