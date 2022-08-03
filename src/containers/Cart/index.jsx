@@ -55,6 +55,7 @@ function Cart() {
                     <div className="card-detail-group">
                       <img className='detail-img'
                         src={product.image}
+                        alt={product.title}
                         />
                       <Card.Body>  
                       <p style={{fontWeight:'600'}}>{product.title}</p>
