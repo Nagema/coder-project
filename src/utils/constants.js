@@ -1,10 +1,12 @@
 const constants = {
     confirm : "Confirm",
-    confirmOrderText: "Proceed to checkout",
+    completeCheckout: "complete checkout",
     currency: "EUR",
     deleteAllText: "Delete all",
     deleteText: "Delete",
     electronics: "Electronics",
+    emailAddress: "Email Address",
+    emailNoteWarning: "We'll never share your email with anyone else.",
     eur: '€',
     fleamarketAndOtherStories: "Fleamarket & other stories",
     goToSeeProducts: "Back to products",

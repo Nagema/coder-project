@@ -76,7 +76,7 @@ function Cart() {
           </div>
             <div>
             <Button variant="outline-success" onClick={confirmOrder}> 
-              {constants.confirmOrderText}
+              {constants.proceedToCheckout}
             </Button>
             </div>
         </div>

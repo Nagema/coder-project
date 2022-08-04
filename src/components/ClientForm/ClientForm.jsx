@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import './styles.css'
 import generateOrder from '../../utils/generateOrder';
 import saveOrder from '../../utils/saveOrder';
+import constants from '../../utils/constants';
 
 function ClientForm() {
 
@@ -16,6 +17,7 @@ function ClientForm() {
     const onChangeEmail = event => {
         setEmail(event.target.value);
     };
+
     const onChangeName = event => {
         setName(event.target.value);
     };
@@ -30,15 +32,20 @@ function ClientForm() {
         saveOrder(cart, order);
         clear();
         navigate('/')
-    }
+    };
+
+    const inputTextValidation = name.length > 2 && address.length > 3
+
+    const disabled = !email || !name || !address || !inputTextValidation;
+
   return (
     <div className='form-client'>
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>{emailAddress}</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" value={email} onChange={onChangeEmail}/>
                 <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
+                {emailNoteWarning}
                 </Form.Text>
             </Form.Group>
 
@@ -51,8 +58,8 @@ function ClientForm() {
                 <Form.Label>Address</Form.Label>
                 <Form.Control type="text" placeholder="Address" value={address} onChange={onChangeAddress} />
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={sendClientInfo}>
-                Submit
+            <Button variant="success" disabled={disabled} type="submit" onClick={sendClientInfo}>
+                {constants.completeCheckout}
             </Button>
         </Form>
     </div>
