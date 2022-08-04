@@ -42,8 +42,14 @@ export const ShopProvider = ({children}) => {
       totalItems += item.addedProducts;
     });
 
+    let totalPrice = 0;
+  
+    cart.forEach(item => {
+      totalPrice += (item.price * item.addedProducts);
+    });
+
   return (
-    <Shop.Provider value={{addItem, removeItem, clear, cart, totalItems}}>
+    <Shop.Provider value={{addItem, removeItem, clear, cart, totalItems, totalPrice}}>
         {children}
     </Shop.Provider>
   )

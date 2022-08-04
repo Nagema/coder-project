@@ -8,30 +8,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import EmptyCart from '../../assets/emptyCart.png';
 import { useNavigate } from 'react-router-dom';
-import generateOrder from '../../utils/generateOrder.js'
-
 import './styles.css'
-import saveOrder from '../../utils/saveOrder';
 import constants from '../../utils/constants';
 
 function Cart() {
-  let totalPrice = 0;
-
-  const { cart, removeItem, clear } = useContext(Shop);
+  
+  const { cart, removeItem, clear, totalPrice } = useContext(Shop);
   const navigate = useNavigate();
   const goToProducts = () => {
     navigate('/')
   }
 
   const confirmOrder = async () => {
-    const order = generateOrder("alguien", "casa de alguien nro 1", cart, totalPrice);
-    saveOrder(cart, order);
-    clear();
+    navigate('/checkout-process')
+
   }
-  
-  cart.forEach(item => {
-    totalPrice += (item.price * item.addedProducts);
-  });
 
   return (
     <Fragment>
@@ -81,7 +72,7 @@ function Cart() {
                 {constants.deleteAllText} {<FontAwesomeIcon icon={faTrash} size="lg" />}
               </span>    
             </Button>
-            <p>{constants.total}: {totalPrice} {constants.eur}</p>
+            <p>{constants.total}: {totalPrice.toFixed(2)} {constants.eur}</p>
           </div>
             <div>
             <Button variant="outline-success" onClick={confirmOrder}> 

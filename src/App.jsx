@@ -9,6 +9,7 @@ import WelcomePage from './containers/welcomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShopProvider from './context/ShopContext';
 import constants from './utils/constants';
+import ClientForm from './components/ClientForm/ClientForm';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
             <Route path='*' element={<NotFound />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
+            <Route path='/checkout-process' element={<ClientForm />}></Route>
           </Routes>
         </Fragment>
       </BrowserRouter>

@@ -1,6 +1,7 @@
-const generateOrder = (name, address, cart, total) =>  {
+const generateOrder = (email, name, address, cart, total) =>  {
    return {  
        buyer: {
+           email: email,
            name: name,
            address: address, 
         },
