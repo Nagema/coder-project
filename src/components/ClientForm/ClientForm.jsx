@@ -35,7 +35,8 @@ function ClientForm() {
     const goToProducts = () => {
       navigate('/')
     }
-    const sendClientInfo = async () => {
+    const sendClientInfo = async (event) => {
+        event.preventDefault();
         const order = generateOrder(email, name, address, cart, totalPrice);
         saveOrder(cart, order);
         clear();
