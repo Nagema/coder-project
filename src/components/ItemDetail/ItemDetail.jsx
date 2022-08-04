@@ -24,28 +24,27 @@ function ItemDetail({
     navigate('/cart')
   }
   return (
-    <div className='detail-item-card'>
-      <Card style={{ width:'80%', margin: 'auto' }}>
+      <div className='detail-item-card'>
+        <Card style={{ width:'80%', margin: 'auto' }}>
         <div className="card-detail-group">
-          <img className='detail-img'
-            src={product.image}
-            alt={product.title}
-            />
-          <Card.Body>  
-          <Card.Title>{product.title}</Card.Title>
-            <Card.Text>
-              {product.description}
-            </Card.Text>
-              {!addedProducts 
-                ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
-                : <Button onClick={purchase}>{constants.proceedToCheckout}: {addedProducts} {constants.item}</Button>
-              }
-          </Card.Body>
-        </div>
-      </Card>
-    </div>
-
-  )
+            <img className='detail-img'
+              src={product.image}
+              alt={product.title}
+              />
+            <Card.Body>  
+            <Card.Title>{product.title}</Card.Title>
+              <Card.Text>
+                {product.description}
+              </Card.Text>
+                {!addedProducts
+                  ? <ButtonCount onConfirm={handleConfirm} maxQuantity={product.stock} />
+                  : <Button onClick={purchase}>{constants.proceedToCheckout}: {addedProducts} {constants.item}</Button>
+                }
+            </Card.Body>
+          </div>
+        </Card>
+      </div>
+    )
 }
 
 export default ItemDetail

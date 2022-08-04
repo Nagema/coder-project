@@ -1,4 +1,28 @@
+.form-client-wrapper {
+   display: flex;
+
+}
+
 .form-client {
-   margin: 20% 10%;
+   border: solid;
+   border-color: #CED4D9;
+   border-radius: 5px;
+   width: 50%;
+   margin: 100px 5%;
    padding: 5%;
+}
+
+.total-info-detail {
+   font-weight: 600;
+   display: flex;
+   justify-content: space-between;
+   border: solid;
+   border-color: #DFDFDF;
+   margin-top: 20px;
+   padding: 20px;
+   padding-bottom: 0;
+}
+
+.alert-message {
+   margin-top: 50px;
 }

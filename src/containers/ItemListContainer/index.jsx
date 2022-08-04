@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import './styles.css';
 import constants from '../../utils/constants';
 import getCollection from '../../utils/getCollection';
+import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
 
 const ItemListContainer = () => {
 
@@ -36,11 +37,12 @@ const ItemListContainer = () => {
   }, [params, products])
   return (
     <div>
-      { products &&
-        <ItemList
+      { products.length !== 0 
+      ? <ItemList
           products={filteredproducts}
           currency={constants.eur}
           />
+      : <LoadingComponent />
       }
     </div>
   )

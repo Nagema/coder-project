@@ -29,11 +29,11 @@ function Cart() {
       {cart.length === 0 && 
        <>
         <Image style={{width:'100%'}} src={EmptyCart} alt="Empty cart"></Image>
-       <div className='back-to-list'>
-        <Button variant="light" onClick={goToProducts}> 
-          {constants.goToSeeProducts}
-        </Button>
-       </div>
+        <div className='back-to-list'>
+          <Button variant="light" onClick={goToProducts}> 
+            {constants.goToSeeProducts}
+          </Button>
+        </div>
        </>
       }
       <div className="cart-wrapper">
