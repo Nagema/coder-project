@@ -13,14 +13,8 @@ export function CartWidget() {
     navigate('/cart')
   }
   
-  const { cart } = useContext(Shop);
+  const { cart, totalItems } = useContext(Shop);
   
-  let totalItems = 0;
-  
-  cart.forEach(item => {
-    totalItems += item.addedProducts;
-  });
-
   return (
       <div className='cart-wrap'>
         {cart.length > 0 &&   

@@ -36,8 +36,14 @@ export const ShopProvider = ({children}) => {
       setCart([]);
     }
 
+    let totalItems = 0;
+  
+    cart.forEach(item => {
+      totalItems += item.addedProducts;
+    });
+
   return (
-    <Shop.Provider value={{addItem, removeItem, clear, cart}}>
+    <Shop.Provider value={{addItem, removeItem, clear, cart, totalItems}}>
         {children}
     </Shop.Provider>
   )
