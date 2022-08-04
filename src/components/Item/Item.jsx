@@ -16,7 +16,7 @@ export function Item({
     navigate(`/detail/${product.id}`)
   }
   return (
-    <Card style={{ width: '25rem', height:'25rem' }} onClick={handleDetail}>
+    <Card style={{ width: '18rem', height:'25rem' }} onClick={handleDetail}>
         <Card.Img 
           variant="top" 
           src={product.image} 

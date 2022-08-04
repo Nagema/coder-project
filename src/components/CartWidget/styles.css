@@ -19,3 +19,9 @@
 .cart-wrap :hover {
     color: #248D5C;
 }
+
+@media (max-width: 991px) {
+    .cart-wrap {
+        margin-top: 0;
+    }
+}
