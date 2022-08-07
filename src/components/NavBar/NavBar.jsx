@@ -41,15 +41,6 @@ export function NavBar() {
                   </div>
                 </NavDropdown>
               </Nav>
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">{constants.search}</Button>
-              </Form>
               <CartWidget />
             </Navbar.Collapse> 
           </Container>
