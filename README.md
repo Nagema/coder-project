@@ -1,25 +1,9 @@
 # Ecommerce Fleamarket online
 
-
-
-### Home 
-![screensot demo](public/demoImages/home.png "Screenshot Demo")
-
-### you can see all products in the home route and clicking the brand icon
-
-![screensot products](public/demoImages/allProducts.png "Screenshot products")
-
-![screensot products](public/demoImages/allproducts2.png "Screenshot products")
-
-
-### you can filter by category
-
-![screensot category](public/demoImages/category.png "Screenshot category")
-
-### you can see the detail when clicking detail button
-
-![screensot category](public/demoImages/detailImage.png "Screenshot detail")
-
+### Web description
+This web has a list of products that you can find by categories and check the detail of each product, you can also add products to the shopping cart and then will direct you to the final process of the checkout where you can also see the detail of the purchase.
+ 
+![web-video](https://user-images.githubusercontent.com/40359358/183314233-a1ebcd84-a21c-4406-bc8b-29630fbfc038.gif)
 
 
 ### React.js
@@ -33,3 +17,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 react bootstrap´s components have been use to style the project
 
 ### `npm install react-bootstrap bootstrap`
+
+### Firebase
+This project is using firebase to create collections such as the list of all the products and the orders generated
+
+### `npm install firebase`
