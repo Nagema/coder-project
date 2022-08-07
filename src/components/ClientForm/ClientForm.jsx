@@ -11,6 +11,7 @@ import saveOrder from '../../utils/saveOrder';
 import constants from '../../utils/constants';
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
+import CheckoutModal from '../CheckoutModal/CheckoutModal';
 
 function ClientForm() {
 
@@ -18,6 +19,15 @@ function ClientForm() {
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
 
+    const [show, setShow] = useState(false);
+    const [order, setOrder] = useState({})
+    
+    const handleCloseModal = () => {
+        setShow(false);
+        clear();
+        navigate('/');
+    }
+   
     const onChangeEmail = event => {
         setEmail(event.target.value);
     };
@@ -37,10 +47,11 @@ function ClientForm() {
     }
     const sendClientInfo = async (event) => {
         event.preventDefault();
-        const order = generateOrder(email, name, address, cart, totalPrice);
-        saveOrder(cart, order);
-        clear();
-        navigate('/')
+        const orderToSave = generateOrder(email, name, address, cart, totalPrice);
+        const newOrder = await saveOrder(cart, orderToSave);
+        setOrder(newOrder);
+        setShow(true)
+        
     };
 
     const inputTextValidation = name.length > 2 && address.length > 3
@@ -74,6 +85,7 @@ function ClientForm() {
                     <Button variant="success" disabled={disabled} type="submit" onClick={sendClientInfo}>
                         {constants.completeCheckout}
                     </Button>
+                    {show && <CheckoutModal show={show} handleClose={handleCloseModal} order={order} />}
                 </Form>
             </div>
             <div className='form-client'>
