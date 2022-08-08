@@ -70,22 +70,22 @@ function Checkout() {
                     sendClientInfo={sendClientInfo}
                     disabled={disabled}
                 />
-                {show && <CheckoutModal show={show} handleClose={handleCloseModal} order={order} />}
-                <PurchaseDetail cart={cart} totalPrice={totalPrice}/>
+                <PurchaseDetail cart={cart} totalPrice={totalPrice}/> 
             </div> 
         :   <div className='alert-message'>
                 <Alert show={true} variant="warning">
-                <Alert.Heading>{constants.helloText}</Alert.Heading>
-                <p>
-                    {constants.warningNote} 😉
-                </p>
-                <hr />
-                <div className="d-flex justify-content-end">
-                    <Button onClick={goToProducts} variant="outline-success">{constants.goToSeeProducts}</Button>
-                </div>
+                    <Alert.Heading>{constants.helloText}</Alert.Heading>
+                    <p>
+                        {constants.warningNote} 😉
+                    </p>
+                    <hr />
+                    <div className="d-flex justify-content-end">
+                        <Button onClick={goToProducts} variant="outline-success">{constants.goToSeeProducts}</Button>
+                    </div>
                 </Alert>
             </div>
         }
+        <CheckoutModal show={show} handleClose={handleCloseModal} order={order} />
     </Fragment>
   )
 }
