@@ -58,34 +58,34 @@ function Checkout() {
 
   return (
     <Fragment>
-        {cart.length !== 0 ?
-        <div className='form-client-wrapper'>
-            <FormClient 
-                email={email}
-                onChangeEmail={onChangeEmail}
-                name={name}
-                onChangeName={onChangeName}
-                address={address}
-                onChangeAddress={onChangeAddress}
-                sendClientInfo={sendClientInfo}
-                disabled={disabled}
-             />
-            {show && <CheckoutModal show={show} handleClose={handleCloseModal} order={order} />}
-            <PurchaseDetail cart={cart} totalPrice={totalPrice}/>
-        </div> : 
-    <div className='alert-message'>
-        <Alert show={true} variant="warning">
-        <Alert.Heading>{constants.helloText}</Alert.Heading>
-        <p>
-            {constants.warningNote} 😉
-        </p>
-        <hr />
-        <div className="d-flex justify-content-end">
-            <Button onClick={goToProducts} variant="outline-success">{constants.goToSeeProducts}</Button>
-        </div>
-        </Alert>
-    </div>
-    }
+        {cart.length !== 0 
+        ?   <div className='form-client-wrapper'>
+                <FormClient 
+                    email={email}
+                    onChangeEmail={onChangeEmail}
+                    name={name}
+                    onChangeName={onChangeName}
+                    address={address}
+                    onChangeAddress={onChangeAddress}
+                    sendClientInfo={sendClientInfo}
+                    disabled={disabled}
+                />
+                {show && <CheckoutModal show={show} handleClose={handleCloseModal} order={order} />}
+                <PurchaseDetail cart={cart} totalPrice={totalPrice}/>
+            </div> 
+        :   <div className='alert-message'>
+                <Alert show={true} variant="warning">
+                <Alert.Heading>{constants.helloText}</Alert.Heading>
+                <p>
+                    {constants.warningNote} 😉
+                </p>
+                <hr />
+                <div className="d-flex justify-content-end">
+                    <Button onClick={goToProducts} variant="outline-success">{constants.goToSeeProducts}</Button>
+                </div>
+                </Alert>
+            </div>
+        }
     </Fragment>
   )
 }
