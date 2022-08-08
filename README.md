@@ -22,3 +22,9 @@ react bootstrap´s components have been use to style the project
 This project is using firebase to create collections such as the list of all the products and the orders generated
 
 ### `npm install firebase`
+
+### Netlify
+
+This project has been deploy with netlify
+
+https://main--fleamarketandotherstories.netlify.app/
