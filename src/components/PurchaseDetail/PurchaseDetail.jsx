@@ -3,7 +3,6 @@ import Image from 'react-bootstrap/Image'
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import constants from '../../utils/constants';
-import './styles.css'
 
 function PurchaseDetail({cart, totalPrice}) {
   return (
