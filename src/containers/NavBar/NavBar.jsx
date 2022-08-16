@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import logo from '../../assets/logo.png';
 import { Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { CartWidget } from '../../components/CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import constants from '../../utils/constants';
+import SearchInput from '../../components/SearchInput/SearchInput';
 
 export function NavBar() {
 
@@ -38,6 +39,7 @@ export function NavBar() {
                   </div>
                 </NavDropdown>
               </Nav>
+              <SearchInput />
               <CartWidget />
             </Navbar.Collapse> 
           </Container>
